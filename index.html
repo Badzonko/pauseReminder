@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="./jsizbor.js"></script>
+<script src="jsvreme.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+  #ogranicenje{
+    color: white;
+    text-align: center;
+  }
+  .clockdate-wrapper {
+    background-color: rgb(202, 30, 30);
+    padding:25px;
+    max-width:350px;
+    width:100%;
+    text-align:center;
+    border-radius:5px;
+}
+#clock{
+    background-color:rgb(40, 51, 206);
+    font-family: sans-serif;
+    font-size:60px;
+    text-shadow:0px 0px 1px #fff;
+    color:rgb(202, 30, 30);
+}
+#clock span {
+    color:rgb(40, 51, 206);
+    text-shadow:0px 0px 1px #333;
+    font-size:30px;
+    position:relative;
+    top:-27px;
+    left:-10px;
+}
+#date {
+    letter-spacing:10px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+  </style>
+  <body  onload="startTime()">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 bg-dark" id="ogranicenje" style="overflow-y:scroll;; height:120px;">
+            <div class="custom-control custom-switch" >
+                <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="x0"> <label class="custom-control-label" for="x0"> 00:00 AM - 01:00AM </label></input>
+            </div>
+            
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="a1"> <label class="custom-control-label" for="a1"> 01:00 AM - 02:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="b2"> <label class="custom-control-label" for="b2"> 02:00 AM - 03:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="c3"> <label class="custom-control-label" for="c3"> 03:00 AM - 04:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="d4"> <label class="custom-control-label" for="d4"> 04:00 AM - 05:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="e5"> <label class="custom-control-label" for="e5"> 05:00 AM - 06:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="f6"> <label class="custom-control-label" for="f6"> 06:00 AM - 07:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="g7"> <label class="custom-control-label" for="g7"> 07:00 AM - 08:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="h8"> <label class="custom-control-label" for="h8"> 08:00 AM - 09:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="i9"> <label class="custom-control-label" for="i9"> 09:00 AM - 10:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="j10"> <label class="custom-control-label" for="j10"> 10:00 AM - 11:00AM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="k11"> <label class="custom-control-label" for="k11"> 11:00 AM - 12:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="l12"> <label class="custom-control-label" for="l12"> 13:00 PM - 14:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="m13"> <label class="custom-control-label" for="m13"> 14:00 PM - 15:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="n14"> <label class="custom-control-label" for="n14"> 16:00 PM - 17:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="o15"> <label class="custom-control-label" for="o15"> 18:00 PM - 19:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="p16"> <label class="custom-control-label" for="p16"> 20:00 PM - 21:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="q17"> <label class="custom-control-label" for="q17"> 21:00 PM - 22:00PM </label></input>
+            </div>
+  
+            <div class="custom-control custom-switch" >
+              <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="r18"> <label class="custom-control-label" for="r18"> 22:00 PM - 23:00PM </label></input>
+            </div>
+
+            <div class="custom-control custom-switch" >
+            <input  type="checkbox" class="custom-control-input" onclick="jedan()" id="s19"> <label class="custom-control-label" for="s19"> 23:00 PM - 00:00AM </label></input>
+            </div>
+
+
+
+
+          </div>
+          <div class="col-sm-6">
+            <div id="clockdate">
+              <div class="clockdate-wrapper">
+                <div id="clock"></div>
+                <div id="date"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+
+          </div>
+      
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
